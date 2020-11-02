@@ -27,7 +27,7 @@ class Movimiento
 
     // GET ALL
     public function getMovimientos(){
-        $sqlQuery = "SELECT id, fecha, costo, tieneDetalle, proyecto_id, centroCosto_id, tipoMovimiento_id, created_at, updated_at FROM ". $this->db_table ."";
+        $sqlQuery = "SELECT id, fecha, costo, tieneDetalle, proyecto_id, centroCosto_id, tipoMovimiento_id, created_at, updated_at FROM ". $this->db_table ." order by updated_at DESC ";
         $stmt = $this->conn->prepare($sqlQuery);
         $stmt->execute();
         return $stmt;

@@ -27,7 +27,7 @@ $item->fecha = $fecha;
 $item->cliente_id = $cliente_id;
 $item->estado_id = $estado_id;
 
-if($item->createMovimiento()){
+if($item->createPeticion()){
     echo 'Movimiento creado exitosamente';
 } else{
     echo 'Error no se pudo crear el movimiento';

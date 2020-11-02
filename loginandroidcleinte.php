@@ -1,6 +1,7 @@
 <?php
 
-include 'conexion.php';
+include 'config/conexion.php';
+
 
 if(strstr( $_SERVER[ 'HTTP_USER_AGENT' ], 'Android')){
     $response = array();
